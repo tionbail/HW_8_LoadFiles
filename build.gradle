@@ -1,0 +1,30 @@
+plugins {
+    id 'java-library'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation(
+            "com.codeborne:selenide:7.14.0",
+            platform("org.junit:junit-bom:5.10.0")
+    )
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "commons-io:commons-io:2.15.0"
+    testImplementation "com.codeborne:pdf-test:1.5.0"
+    testImplementation "com.codeborne:xls-test:1.4.3"
+    testImplementation "com.opencsv:opencsv:5.9"
+    testImplementation "org.apache.commons:commons-compress:1.28.0"
+    testImplementation "tools.jackson.core:jackson-databind:3.1.2"
+
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+test {
+    useJUnitPlatform()
+}

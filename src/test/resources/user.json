@@ -1,0 +1,10 @@
+{
+  "user": "TionBail",
+  "ID": 1,
+  "name": "Ivan Petrov",
+  "items": {
+    "email": "ivan.petrov@test.com",
+    "language": "RU",
+    "active": true
+  }
+}
